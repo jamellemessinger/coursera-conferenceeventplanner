@@ -65,6 +65,7 @@ const ConferenceEvent = () => {
   };
     const venueTotalCost = calculateTotalCost("venue");
     const avTotalCost = calculateTotalCost("av");
+    const mealsItems = useSelector((state) => state.meals);
 
     const navigateToProducts = (idType) => {
         if (idType == '#venue' || idType == '#addons' || idType == '#meals') {
