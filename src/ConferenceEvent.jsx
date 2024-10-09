@@ -70,6 +70,12 @@ const ConferenceEvent = () => {
       avItems.forEach((item) => {
         totalCost += item.cost * item.quantity;
       });
+    } else if (section === "meals") {
+        mealsItems.forEach((item) => {
+            if (item.selected) {
+              totalCost += item.cost * numberOfPeople;
+            }
+          });
     }
     return totalCost;
   };
